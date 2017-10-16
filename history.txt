@@ -1,0 +1,512 @@
+?iris
+library(datasets)
+data(iris)
+?iris
+mean(iris)
+head(iris)
+tapply(iris$Sepal.Length,iris$Species,mean)
+rowMeans(iris[, 1:4])
+class(rowMeans(iris[, 1:4]))
+?apply
+apply(iris, 2, mean)
+apply(iris[, 1:4], 1, mean)
+apply(iris[, 1:4], 2, mean)
+class(apply(iris[, 1:4], 2, mean))
+apply(iris, 1, mean)
+colMeans(iris)
+library(datasets)
+data(mtcars)
+?mtcars
+tapply(mtcars$cyl, mtcars$mpg, mean)
+head(mtcars)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+class(mtcars)
+apply(mtcars, 2, mean)
+?apply
+?with
+with(mtcars, tapply(mpg, cyl, mean))
+split(mtcars, mtcars$cyl)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+sapply(mtcars, cyl, mean)
+tapply(mtcars$cyl, mtcars$mpg, mean)
+lapply(mtcars, mean)
+mean(mtcars$mpg, mtcars$cyl)
+tapply(mtcars$hp, mtcars$cyl, mean)
+a<-tapply(mtcars$hp, mtcars$cyl, mean)
+class(a)
+a[1]-a[2]
+a[1]-a[8]
+a[1]-a[2]
+debug(ls)
+ls
+?debug
+fileUrlXML<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+restaurantData<-xmlTreeParse(fileUrlXML, useInternalNodes = TRUE)
+library(XML)
+library(XML)
+install.packages("XML")
+library(XML)
+fileUrlXML <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+restaurantData <- xmlTreeParse(fileUrlXML,useInternalNodes = TRUE)
+install.packages("curl")
+curlVersion()$features
+library(curl)
+curlVersion()$features
+curl_version()$features
+curl_version()$protocol
+restaurantData <- getURL("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml", curl=curl)
+install.packages("RCurl")
+restaurantData <- getURL("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml", curl=curl)
+require(RCurl)
+restaurantData <- getURL("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml", curl=curl)
+curl<-getCurlHandle()
+getURL("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml", ssl.verifyPeer=FALSE)
+restaurantData <- getURL("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml", ssl.verifyPeer=FALSE)
+doc<-xmlTreeParse(restaurantData,useInternalNodes = TRUE)
+rootNode<-xmlRoot(doc)
+xmlName(rootNode)
+xpathSApply(rootNode,"//zipcode",xmlValue)
+zipcodes<-xpathSApply(rootNode,"//zipcode",xmlValue)
+table(zipcodes)
+?require
+str(restaurantData)
+class(restaurantData)
+is.character(restaurantData)
+fileURL<- https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv
+fileURL<- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
+download.file(fileURL, destfile = "ACS.csv")
+?fread
+??Fread
+install.packages("data.table")
+?fread
+library(data.table)
+?fread
+fread("ACS.csv")
+DT<-fread("ACS.csv")
+system.time(sapply(split(DT$pwgtp15,DT$SEX),mean))
+system.time(rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2])
+system.time({rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]})
+DT
+system.time(sapply(split(DT$pwgtp15,DT$SEX),mean))
+system.time({})
+system.time({rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]})
+system.time({rowMeans(DT)[DT$SEX==1] rowMeans(DT)[DT$SEX==2]})
+system.time({rowMeans(DT)[DT$SEX==1] rowMeans(DT)[DT$SEX==2]})
+system.time({
+rowMeans(DT)[DT$SEX==1]
+rowMeans(DT)[DT$SEX==2]
+})
+?rowMeans
+DT
+rowMeans(DT)[DT$SEX==1]
+DT[,mean(pwgtp15),by=SEX]
+install.packages("httr")
+install.packages("httpuv")
+myapp <- oauth_app("github",
+key = "3ba6c38e4b1475334b22",
+secret = "0d8b301550e2015747065b6bb21aaf34c5e0e30d")
+library(httr)
+library(httpuv
+)
+library(httpuv)
+library(httpuv)
+install.packages("httpuv")
+myapp <- oauth_app("github",
+key = "3ba6c38e4b1475334b22",
+secret = "0d8b301550e2015747065b6bb21aaf34c5e0e30d")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+local({pkg <- select.list(sort(.packages(all.available = TRUE)),graphics=TRUE)
+if(nchar(pkg)) library(pkg, character.only=TRUE)})
+utils:::menuInstallPkgs()
+q()
+library(httpuv)
+install.packages(c("Rcpp", "httpuv", "shiny"))
+library(httpuv)
+require(httpuv)
+local({pkg <- select.list(sort(.packages(all.available = TRUE)),graphics=TRUE)
+if(nchar(pkg)) library(pkg, character.only=TRUE)})
+update.packages(ask='graphics',checkBuilt=TRUE)
+local({pkg <- select.list(sort(.packages(all.available = TRUE)),graphics=TRUE)
+if(nchar(pkg)) library(pkg, character.only=TRUE)})
+utils:::menuInstallPkgs()
+library(httpuv)
+remove.packages(httpuv
+)
+remove.packages(httpuv)
+remove.packages()
+remove.packages(httr)
+remove.packages(htpuv)
+remove.packages(httpuv)
+library(httpuv)
+utils:::menuInstallPkgs()
+q()
+install.packages("httpuv")
+library(httpuv)
+library(httr)
+oauth_endpoints("github")
+myapp <- oauth_app("github",key = "3ba6c38e4b1475334b22",secret = "8e107541ae1791259e9987d544ca568633da2eb0d8b301550e2015747065b6bb21aaf34c5e0e30df")
+myapp <- oauth_app("github",key = "3ba6c38e4b1475334b22",secret = "0d8b301550e2015747065b6bb21aaf34c5e0e30d")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+libtary(httr)
+library(httr)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+library(httr)
+myapp <- oauth_app("github",key = "3ba6c38e4b1475334b22",secret = "0d8b301550e2015747065b6bb21aaf34c5e0e30d")
+oauth_endpoints("github")
+myapp <- oauth_app("github",key = "3ba6c38e4b1475334b22",secret = "0d8b301550e2015747065b6bb21aaf34c5e0e30d")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/rate_limit", gtoken)
+stop_for_status(req)
+content(req)
+gtoken
+req <- GET("https://api.github.com/rate_limit", gtoken)https://api.github.com/users/jtleek/repos
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req
+stop_for_status(req)
+content(req)
+?content
+str(req)
+class(req)
+head(Req)
+head(req)
+json1=content(req)
+json2=jsonlite::fromJSON(toJSON(json1))
+library(jsonlite)
+json2=jsonlite::fromJSON(toJSON(json1))
+json2[1,1:4]
+class(json2)
+table(json2)
+str(json2)
+dim(json2)
+class(json2)
+head(json2)
+json2$name
+dim(json2)
+grepl("datasharing",json2$name)
+isdatasharing<-grepl("datasharing",json2$name)
+class(isdatasharing)
+which(isdatasharing)
+json2[[12]]$created_at
+json2[[12]]
+json2[[1]]
+names(json2)
+names(json2)
+json2[json2$name=="datasharing"]
+json2[json2$name=="datasharing",]
+json2[json2$name=="datasharing",json2$created_at]
+subset(json2,name=="datasharing",select="created_at")
+q()
+q()
+library(swirl)
+swirl()
+?swirl
+install_course("Manipulating Data with dplyr")
+install.packages(swirl)
+install.packages("swirl")
+install_course("Manipulating Data with dplyr")
+library
+(swirl)
+library(swirl)
+install_course("Manipulating Data with dplyr")
+install_from_swirl("Getting and Cleaning Data")
+swirl()
+install.packages("data.table")
+q()
+source('E:/Data Science/Cleaning Data/run_analysis.R')
+run_analysis()
+DatasetURL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
+localfile<-"ss06hid.csv"
+download.file(DatasetURL,destfile = localfile,mode = "wb")
+read.csv(file = localfile)
+ss06hid<-read.csv(file = localfile)
+View(ss06hid)
+colnames(ss06hid)
+?strsplit
+colnames<-colnames(ss06hid)
+strsplit(colnames,"wgtp")
+strsplit(colnames[123],"wgtp")
+DatasetURL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"
+localfile<-FGDP.csv
+localfile<-"FGDP.csv"
+download.file(DatasetURL,destfile = localfile,mode = "wb")
+read.csv(file = localfile)
+GDP<-read.csv(file = localfile)
+View(GDP)
+?SUB
+?sub
+GDPclean<-sub("\\,","",GDP$X.3)
+GDPclean
+GDPclean<-Gsub("\\,","",GDP$X.3)
+GDPclean<-gsub("\\,","",GDP$X.3)
+GDPclean
+GDPclean[5:194]
+?mean
+mean(GDPclean[5:194])
+class(GDPclean[5:194])
+as.numeric(GDPclean[5:194])
+mean(as.numeric(GDPclean[5:194]))
+countryNames<-GDPclean$X[5:194]
+GDPclean\
+GDPclean
+countryNames<-GDP$X[5:194]
+grep("^United",countryNames)
+countryNames<-GDP$X.2[5:194]
+grep("^United",countryNames)
+DatasetURL
+DatasetURL2<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv""
+DatasetURL2<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"
+localfile2<-"edstats.csv"
+download.file(DatasetURL2,destfile2 = localfile,mode = "wb")
+download.file(DatasetURL2,destfile = localfile2,mode = "wb")
+read.csv(localfile2)
+edstats<-read.csv(localfile2)
+View(edstats)
+GDPclean<-GDP[5:194,]
+View(GDPclean)
+mergedData<-merge(GDPclean,edstats,by.x="X",by.y="CountryCode",all=TRUE)
+View(mergedData)
+grep("*Fiscal*June*",mergedData$Special.Notes)
+grep("^Fiscal*June*",mergedData$Special.Notes)
+grep("^Fiscal*",mergedData$Special.Notes)
+grep("^Fiscal*une",mergedData$Special.Notes)
+grep("^Fiscal*une*",mergedData$Special.Notes)
+grep("^Fiscal.*une.*",mergedData$Special.Notes)
+length(grep("^Fiscal.*une.*",mergedData$Special.Notes))
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn)
+install.packages("quantmod")
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn)
+sampleTimes
+amzn
+?getSymbols
+?index
+class(sampleTimes)
+weekdays(sampleTimes)
+weekdays<-weekdays(sampleTimes)
+length(grep("Monday",weekdays))
+years(sampleTimes)
+sampleTimes
+install.packages("lubridate")
+library(lubridate)
+year(sampleTimes)
+year<-year(sampleTimes)
+class(year)
+length(grep("2012",weekdays))
+year[year=2012]
+year[year=2012,]
+year[year==2012,]
+year[year==2012]
+length(year[year==2012])
+which(year[year==2012])
+year==2012
+which(year==2012)
+which(!year==2012)
+cleanyear<-year(-which(!year==2012))
+rows<-which(!year==2012)
+rows
+!year==2012
+years(!year==2012)
+years
+year
+year(!year==2012)
+year
+class(year)
+!year==2012
+year==2012
+!year==2012
+year[!year==2012]
+year[year==2012]
+length(year[year==2012])
+library(swirl)
+install_from_swirl("Exploratory Data Analysis")
+swirl()
+head(pollution)
+dim(pollution)
+summary(pollution$pm25)
+quantile(ppm)
+boxplot(ppm,col =  "blue")
+abline(h=12)
+hist(popm,col="green")
+hist(ppm,col="green")
+rug(ppm)
+low
+high
+hist(ppm,col="green",breaks=100)
+rug(ppm)
+hist(ppm,col="green")
+abline(v=12,lwd=2)
+abline(v=median(ppm),col="magenta",lwd=4)
+names(pollution)
+reg<-table(pollution$region)
+reg
+barplot(reg,col="wheat",main="Number of Counties in Each Region")
+boxplot(y~x,data=pollution,col="red")
+boxplot(pm25~region,data=pollution,col="red")
+par(mfrow=c(2,1),mar=c(4,4,2,1))
+east<-subset(pollution,region=="east")
+head(east)
+hist(east$pm25,col="green")
+hist(subset(pollution,region=="west"),col="green")
+hist(subset(pollution$pm25,region=="west"),col="green")
+west<-subset(pollution,region=="wast")
+hist(subset(pollution,region=="west")$pm25,col="green")
+plot(x = lati\
+plot(x = lati
+)
+plot(pollution)
+Type with(pollution, plot(latitude, pm25)) at the command prompt.
+Type with(pollution, plot(latitude, pm25))
+with(pollution, plot(latitude, pm25))
+abline(lwd=2,lty=2)
+abline(h=12,lwd=2,lty=2)
+plot(pollution$latitude,ppm,col=pollution$region)
+abline(h=12,lwd=2,lty=2)
+par(mfrow = c(1, 2), mar = c(5, 4, 2, 1))
+west<-subset(pollution,region="west")
+west<-subset(pollution,region=="west")
+plot(west$latitude,west$pm25,main="west")
+plot(west$latitude,west$pm25,main="west")
+plot(west$latitude, west$pm25, main = "West")
+plot(east$latitude, east$pm25, main = "east")
+plot(east$latitude, east$pm25, main = "East")
+setwd("E:/Data Science/Reproducible")
+read.csv("activity.csv")
+Activity<-read.csv("activity.csv")
+View(Activity)
+library(dplyr)
+class(Activity$date)
+Activity$date<-as.Date(as.character(Activity$date))
+class(Activity$date)
+date<-group_by(Activity, date)
+?sum
+summarize(date,sum=sum(steps,na.rm=TRUE),mean=mean(steps,na.rm=true),median=median(steps,na.rm=TRUE))
+summarize(date,sum=sum(steps,na.rm=TRUE),mean=mean(steps,na.rm=TRUE),median=median(steps,na.rm=TRUE))
+summarysteps<-summarize(date,sum=sum(steps,na.rm=TRUE),mean=mean(steps,na.rm=TRUE),median=median(steps,na.rm=TRUE))
+View(summarysteps)
+library(ggplot2)
+qplot
+qplot(summarysteps,data=sum)
+?qplot
+class(summarysteps)
+summarysteps$sum
+summarysteps$date
+sumsteps<-summarysteps[,c(1,2)]
+sumsteps
+class(sumsteps)
+as.data.frame(sumsteps)
+sumsteps<-as.data.frame(sumsteps)
+qplot(sumsteps,data=sum)
+hist(sumsteps$sum)
+interval<-group_by(Activity, interval)
+meanstepsbyinterval<-summarize(interval,mean=mean(steps,na.rm=true))
+meanstepsbyinterval<-summarize(interval,mean=mean(steps,na.rm=TRUE))
+View(meanstepsbyinterval)
+DFsteps<-as.data.frame(meanstepsbyinterval)
+with(DFsteps, plot(interval,mean,type="l"))
+View(sumsteps)
+sum(is.na(Activity$steps))
+sum(!is.na(Activity$steps))
+ActivityNoNAs<-Activity
+ActivityNoNAs$steps[1]
+View(ActivityNoNAs)
+View(summarysteps)
+?replace
+?first
+?ifelse
+ActivityNoNAs<-group_by(ActivityNoNAs,date)
+mutate(ActivityNoNAs,Mean=mean(steps,na.rm=TRUE),steps=replace(steps,which(is.na(steps)),first(Mean)))
+ActivityNoNAsMean<-mutate(ActivityNoNAs,Mean=mean(steps,na.rm=TRUE),steps=replace(steps,which(is.na(steps)),first(Mean)))
+View(ActivityNoNAsMean)
+ActivityNoNAs<-group_by(ActivityNoNAs,interval)
+ActivityNoNAs<-Activity
+ActivityNoNAs<-group_by(ActivityNoNAs,interval)
+ActivityNoNAsMeaninterval<-mutate(ActivityNoNAs,Mean=mean(steps,na.rm=TRUE),steps=replace(steps,which(is.na(steps)),first(Mean)))
+View(ActivityNoNAsMeaninterval)
+View(ActivityNoNAsMeaninterval)
+View(DFsteps)
+View(DFsteps)
+with(ActivityNoNAsMeaninterval, plot(interval,mean,type="l"))
+with(as.data.frame(ActivityNoNAsMeaninterval), plot(interval,mean,type="l"))
+ActivityNoNAsMeanintervalDF<-as.data.frame(ActivityNoNAsMeaninterval)
+with(ActivityNoNAsMeaninterval, plot(interval,mean,type="l"))
+with(ActivityNoNAsMeaninterval, plot(interval,Mean,type="l"))
+ActivityNoNAsMeanintervalDF<-group_by(ActivityNoNAsMeaninterval,interval)
+meanstepsbyintervalnoNAs<-summarize(ActivityNoNAsMeanintervalDF,mean=mean(steps,na.rm=true))
+meanstepsbyintervalnoNAs<-summarize(ActivityNoNAsMeanintervalDF,mean=mean(steps,na.rm=TRUE))
+meanstepsbyintervalnoNAsDF<-as.data.frame(meanstepsbyintervalnoNAs)
+with(meanstepsbyintervalnoNAsDF, plot(interval,Mean,type="l"))
+with(meanstepsbyintervalnoNAsDF, plot(interval,mean,type="l"))
+savehistory("E:/Data Science/Reproducible/history.txt")
+View(meanstepsbyintervalnoNAs)
+View(meanstepsbyinterval)
+meanstepsbyintervalnoNAs<-summarize(ActivityNoNAsMeanintervalDF,mean=mean(steps))
+meanstepsbyintervalnoNAsDF<-as.data.frame(meanstepsbyintervalnoNAs)
+with(meanstepsbyintervalnoNAsDF, plot(interval,mean,type="l"))
+View(meanstepsbyintervalnoNAsDF)
+View(interval)
+View(DFsteps)
+class(ActivityNoNAsMeaninterval)
+ActivityNoNAsMeanintervalDF<-group_by(as.data.frame(ActivityNoNAsMeaninterval),interval)
+meanstepsbyintervalnoNAs<-summarize(ActivityNoNAsMeanintervalDF,mean=mean(steps,na.rm=TRUE))
+meanstepsbyintervalnoNAsDF<-as.data.frame(meanstepsbyintervalnoNAs)
+with(meanstepsbyintervalnoNAsDF, plot(interval,Mean,type="l"))
+with(meanstepsbyintervalnoNAsDF, plot(interval,mean,type="l"))
+hist(sumsteps$sum)
+View(ActivityNoNAsMeanintervalDF)
+summarystepsnoNA<-group_by(ActivityNoNAsMeanintervalDF, date)
+summarystepsnoNA<-summarize(summarystepsnoNA,sum=sum(steps),mean=mean(steps),median=median(steps))
+View(summarystepsnoNA)
+sumstepsnoNA<-summarysteps[,c(1,2)]
+sumstepsnoNA<-as.data.frame(sumstepsnoNA)
+hist(sumstepsnoNA$sum)
+hist(sumstepsnoNA$sum,ylim=c(0,50))
+hist(sumsteps$sum,ylim=c(0,50))
+sumstepsnoNA<-sumstepsnoNA[,c(1,2)]
+sumstepsnoNA<-as.data.frame(sumstepsnoNA)
+hist(sumstepsnoNA$sum,ylim=c(0,50))
+hist(sumsteps$sum,ylim=c(0,50))
+summarystepsnoNA<-group_by(ActivityNoNAsMeanintervalDF, date)
+summarystepsnoNA<-summarize(summarystepsnoNA,sum=sum(steps),mean=mean(steps),median=median(steps))
+sumstepsnoNA<-summarystepsnoNA[,c(1,2)]
+hist(sumstepsnoNA$sum,ylim=c(0,50))
+savehistory("E:/Data Science/Reproducible/history.txt")
+?weekdays
+Activity2<-ActivityNoNAsMeanintervalDF
+Activity2$date<-as.Date(Activity2$date)
+View(Activity2)
+Activity2<-mutate(Activity2,weekday=weekdays(date))
+Activity2$date[Activity2$date=="Saturday" | Activity2$date=="Sunday"]<-"Weekend"
+class(Activity2$weekday)
+Activity2$weekday[Activity2$weekday=="Saturday" | Activity2$weekday=="Sunday"]<-"Weekend"
+Activity2$weekday[!Activity2$weekday=="Saturday" & !Activity2$weekday=="Sunday"]<-"Weekday"
+Activity2<-mutate(Activity2,weekday=weekdays(date))
+Activity2$weekday[!Activity2$weekday=="Saturday" & !Activity2$weekday=="Sunday"]<-"Weekday"
+Activity2$weekday[Activity2$weekday=="Saturday" | Activity2$weekday=="Sunday"]<-"Weekend"
+Activity2<-ActivityNoNAsMeanintervalDF
+Activity2$weekday[!Activity2$weekday=="Saturday" & !Activity2$weekday=="Sunday"]<-"Weekday"
+Activity2<-mutate(Activity2,weekday=weekdays(date))
+Activity2$weekday[!Activity2$weekday=="Saturday" & !Activity2$weekday=="Sunday"]<-"Weekday"
+Activity2$weekday[Activity2$weekday=="Saturday" | Activity2$weekday=="Sunday"]<-"Weekend"
+Activity2line<-group_by(Activity2,interval)
+Activity2linesummary<-summarize(Activity2line,mean=mean(steps))
+Activity2linesummary<-as.data.frame(Activity2linesummary)
+View(Activity2linesummary)
+Activity2line<-group_by(Activity2,interval,weekday)
+Activity2linesummary<-summarize(Activity2line,mean=mean(steps))
+Activity2linesummary<-as.data.frame(Activity2linesummary)
+class(Activity2linesummary$weekday)
+Activity2linesummary$weekday<-as.factor(Activity2linesummary$weekday)
+class(Activity2linesummary$weekday)
+library(lattice)
+xyplot(interval ~ mean | weekday, data=Activity2linesummary, layout=c(1,2))
+xyplot(mean ~ interval | weekday, data=Activity2linesummary, layout=c(1,2), type="l")
+savehistory("E:/Data Science/Reproducible/history.txt")
