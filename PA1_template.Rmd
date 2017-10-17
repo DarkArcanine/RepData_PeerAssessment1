@@ -116,6 +116,8 @@ summarystepsnoNA$date<-as.character(summarystepsnoNA$date)
 hist(summarystepsnoNA$sum,ylim=c(0,50))
 ```
 
+and Calculate and report the mean and median total number of steps taken per day. 
+
 ```{r, results='asis',message=F, warning=F}
 mean(summarystepsnoNA$sum,na.rm=TRUE)
 median(summarystepsnoNA$sum,na.rm=TRUE)
